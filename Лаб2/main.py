@@ -11,7 +11,5 @@ def main():
     print(my_square)
     print(my_circle)
 
-    #pip
-
 if __name__ == "__main__":
     main()
