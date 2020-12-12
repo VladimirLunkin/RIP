@@ -1,0 +1,9 @@
+/* Нечетные строки */
+tr:nth-child(odd){
+	background: #fff;
+}
+
+/* Четные строки */
+tr:nth-child(even){
+	background: #F7F7F7;
+}
