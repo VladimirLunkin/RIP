@@ -1,3 +1,5 @@
+# Паттерн "Адаптер"
+
 # класс цилиндрических деталей
 class RoundDetail:
 
@@ -13,10 +15,6 @@ class SquareDetail:
 
     def __init__(self, width):
         self.width = width
-
-    # для тестирования
-    # def get_radius(self):
-    #     return self.width
 
     def get_width(self):
         return self.width

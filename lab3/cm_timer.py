@@ -18,15 +18,14 @@ class cm_timer_1:
 
 @contextmanager
 def cm_timer_2():
-    begin_time=time()
+    begin_time = time()
     yield 1
     print('time:', time() - begin_time)
 
 
 if __name__ == '__main__':
-
     with cm_timer_1():
-        sleep(3.5)
+        sleep(0.5)
 
     with cm_timer_2():
-        sleep(2.5)
+        sleep(1)

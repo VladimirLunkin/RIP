@@ -2,11 +2,9 @@ import json
 from unique import Unique
 from print_result import print_result
 from cm_timer import cm_timer_1
-from random import randint
 from gen_random import gen_random
 from field import field
 import re
-import sys
 
 path = 'data_light.json'
 
@@ -18,11 +16,13 @@ with open(path) as f:
 @print_result
 def f1(arg):
     return Unique(field(data, "job-name"), ignore_case=True)
+    # return list(Unique(field(data, "job-name"), ignore_case=True))
 
 
 @print_result
 def f2(arg):
     return filter(lambda x: re.search(r'\bПрограммист\b', x) or re.search(r'\bпрограммист\b', x), arg)
+    # return list(filter(lambda x: re.search(r'\bПрограммист\b', x) or re.search(r'\bпрограммист\b', x), arg))
 
 
 @print_result
@@ -39,7 +39,6 @@ def f4(arg):
 
 def main():
     with cm_timer_1():
-
         f4(f3(f2(f1(data))))
 
 

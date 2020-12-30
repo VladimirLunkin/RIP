@@ -16,7 +16,6 @@ def print_result(func_to_decorate):
     return decorated_func
 
 
-
 @print_result
 def test_1():
     return 1
@@ -38,7 +37,7 @@ def test_4():
 
 
 if __name__ == '__main__':
-    print('!!!!!!!!!!!!!!!')
+    print('!!!!!!!!')
     test_1()
     test_2()
     test_3()

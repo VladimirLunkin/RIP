@@ -17,7 +17,7 @@ class Unique(object):
                 temp_item = item
                 self.index += 1
                 if (temp_item not in self.used_elements) \
-                        and not(self.ignore_case and temp_item.swapcase() in self.used_elements):
+                        and not (self.ignore_case and temp_item.swapcase() in self.used_elements):
                     self.used_elements.add(temp_item)
                     return temp_item
             else:
@@ -34,18 +34,21 @@ def main():
     for i in iter1:
         print(i, end=' ')
     print('\n')
+
     data2 = ['a', 'A', 'b', 'B', 'a', 'A', 'b', 'B']
     print(data2)
     iter2 = Unique(data2)
     for i in iter2:
         print(i, end=' ')
     print('\n')
+
     print(data2)
     iter3 = Unique(data2, ignore_case=True)
     for i in iter3:
         print(i, end=' ')
     print('\n')
-    gen = gen_random.gen_random(3, 1, 3)
+
+    gen = gen_random.gen_random(10, 1, 5)
     iter4 = Unique(gen)
     for i in iter4:
         print(i, end=' ')

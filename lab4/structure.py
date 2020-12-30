@@ -1,5 +1,6 @@
-from abc import ABC, abstractmethod
+# Паттерн "Наблюдатель"
 
+from abc import ABC, abstractmethod
 
 # абстрактный класс издателя
 class Publisher(ABC):
